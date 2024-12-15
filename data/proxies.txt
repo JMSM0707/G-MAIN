@@ -1,1 +1,5 @@
-http://9fdba1f21a22c2e3:RNW78Fm5@res.proxy-seller.com:10000
+http://login:parol@ip:port
+http://login:parol@ip:port
+http://login:parol@ip:port
+http://login:parol@ip:port
+http://login:parol@ip:port
