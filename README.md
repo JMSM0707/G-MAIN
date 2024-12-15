@@ -137,9 +137,10 @@ MINING_MODE = True
 
 Shu bilan birga siz CONSOL yoki NODE rejimiga o'tishni tanlashingiz mumkin.
 Buning uchun: `data/proxies.txt` dan sozlamalarni o'zgartirishingiz kerak.
+Agar True bo'lsa - konsol versiyasidan foydalaniladi va interfeys ko'rinmaydi, agar False bo'lsa - konsol versiyasidan foydalanilmaydi va interfeys ko'rinadi
 ```ochiq matn
-USE_CONSOLE_VERSION = True # Agar True bo'lsa - konsol versiyasidan foydalaniladi va interfeys ko'rinmaydi, agar False bo'lsa - konsol versiyasidan foydalanilmaydi va interfeys ko'rinadi
-NODE_TYPE = "2x"  # 1x, 1_25x, 2x # Bu yerda nodening darajasini tanlashingiz mumkin.
+USE_CONSOLE_VERSION = True
+NODE_TYPE = "2x"  # 1x, 1_25x, 2x
 
 ```
 ### 5. Captchani hal qilish
