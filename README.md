@@ -1,5 +1,5 @@
 # G-MAIN
-# 🔹Grass Auto Reger&Farm 🔹
+# 🔹Grass Auto ro'yhatdan o'tish va point farm 🔹
 
 ![image](https://github.com/MsLolita/grass/assets/58307006/610b95b4-369f-4a71-ac24-f45e8dee6380)
 
@@ -137,8 +137,8 @@ MINING_MODE = True
 Shu bilan birga siz CONSOL yoki NODE rejimiga o'tishni tanlashingiz mumkin.
 Buning uchun: `data/proxies.txt` dan sozlamalarni o'zgartirishingiz kerak.
 
-USE_CONSOLE_VERSION = True # if True - use console version and no interface shows
-NODE_TYPE = "2x"  # 1x, 1_25x, 2x
+USE_CONSOLE_VERSION = True # Agar True bo'lsa - konsol versiyasidan foydalaniladi va interfeys ko'rinmaydi, agar False bo'lsa - konsol versiyasidan foydalanilmaydi va interfeys ko'rinadi
+NODE_TYPE = "2x"  # 1x, 1_25x, 2x # Bu yerda nodening darajasini tanlashingiz mumkin.
 ---
 
 ### 5. Captchani hal qilish
