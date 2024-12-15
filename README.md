@@ -5,7 +5,7 @@
 
 
 ### Bot nima qila oladi?
-   - Akkaunt yaratdi
+   - Akkaunt yaratadi
    - Farm Point
    - Pointlarni tekshiradi
    - Kirishni imkoni bo'lmagan elektron pochta xabarlarini tasdiqlaydi (imap kerak emas va hokazo)
