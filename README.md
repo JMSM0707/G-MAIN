@@ -25,11 +25,12 @@
  - Api kalitini "data/config.py" ga tashlang. Ro'yhatdan o'tish uchun captcha mavjud so'ralgani uchun, sizga captchalarni hal qilish uchun xizmat kerak bo'ladi - [AntiCaptcha](http://getcaptchasolution.com/t8yfysqmh3) or [Twocaptcha](https://2captcha.com/?from=12939391).
  - Hisob qaydnomalarini ro'yxatdan o'tkazish uchun quyidagi tarzda elektron pochta va parollar (ixtiyoriy) va proksi-serverlarni taqdim eting!
 
+```ochiq matn
   uvhxczuivhiuh1@mail.ru:Ag354654!
   uvhxczuivhiuh1@mai2.ru:Ag354654!
   uvhxczuivhiuh1@mai3.ru:Ag354654!
   uvhxczuivhiuh1@mai4.ru:Ag354654!
-
+```
 2. FARM POINT:
  - `data/config.py` da `REGISTER_ACCOUNT_ONLY = False` so'zini qo'ying
  - Yuqorida ko'rsatilganidek, hisoblarni elektron pochta va parollar va proksi-serverlarni taqdim eting!
