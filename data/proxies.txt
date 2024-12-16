@@ -1,5 +1,1 @@
 http://login:parol@ip:port
-http://login:parol@ip:port
-http://login:parol@ip:port
-http://login:parol@ip:port
-http://login:parol@ip:port
