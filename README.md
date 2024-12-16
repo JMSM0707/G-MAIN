@@ -4,6 +4,8 @@
 CONSOLE
 ![image](https://github.com/JMSM0707/G-MAIN/blob/main/core/static/Image-1.png)
 
+NODE 2X
+![image](https://github.com/JMSM0707/G-MAIN/blob/main/core/static/Image-2.png)
 
 ### Bot nima qila oladi?
    - Akkaunt yaratadi
