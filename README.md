@@ -1,3 +1,18 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # G-MAIN
 # 🔹Grass Auto ro'yhatdan o'tish va point farm 🔹
 
@@ -12,6 +27,7 @@
 
 > Siz imkon qadar ko'proq proksi-server qo'yishingiz mumkin, bot ma'lumotlar bazasidan foydalanadi va proksi-serverlarni qo'shimcha proksilardan yuklaydi.
 
+
 1 akkauntga bir nechta ulanishlarni ulash uchun akkauntlarni accounts.txt faylida ko'paytirish kifoya.
 
 ## Tez boshlash 📚
@@ -22,15 +38,11 @@
 
 1. AKKAUNT YARATISH:
  - `data/config.py` da `REGISTER_ACCOUNT_ONLY = True` so'zini qo'ying
- - Api kalitini "data/config.py" ga tashlang. Ro'yhatdan o'tish uchun captcha mavjud so'ralgani uchun, sizga captchalarni hal qilish uchun xizmat kerak bo'ladi - [AntiCaptcha](http://getcaptchasolution.com/t8yfysqmh3) or [Twocaptcha](https://2captcha.com/?from=12939391).
+ - Api kalitini "data/config.py" ga joylang. Ro'yhatdan o'tish uchun captcha so'ralgani uchun, sizga captchalarni hal qilish uchun xizmat kerak bo'ladi - [AntiCaptcha](http://getcaptchasolution.com/t8yfysqmh3) or [Twocaptcha](https://2captcha.com/?from=12939391).
  - Hisob qaydnomalarini ro'yxatdan o'tkazish uchun quyidagi tarzda elektron pochta va parollar (ixtiyoriy) va proksi-serverlarni taqdim eting!
 
-```ochiq matn
-  uvhxczuivhiuh1@mail.ru:Ag354654!
-  uvhxczuivhiuh1@mai2.ru:Ag354654!
-  uvhxczuivhiuh1@mai3.ru:Ag354654!
-  uvhxczuivhiuh1@mai4.ru:Ag354654!
-```
+
+
 2. FARM POINT:
  - `data/config.py` da `REGISTER_ACCOUNT_ONLY = False` so'zini qo'ying
  - Yuqorida ko'rsatilganidek, hisoblarni elektron pochta va parollar va proksi-serverlarni taqdim eting!
@@ -48,15 +60,24 @@
  -  `EMAIL_FOLDER = "" `  # pochtaga tasdiqlash xati keladigan joyni avtomatik aniqlashi uchun o'tkazib yuboring, yoki pochta xat keladigan papkani yozing (Misol uchun "INBOX"
  -  `IMAP_DOMAIN = "" `  # avtomatik domen uchun o'tish, har doim ham ishlamaydi
 
+
+
+
+
+
 ### Konfiguratsiya 📧
 
 1. Hisoblarni sozlash 🔒
 
    `data/accounts.txt` hisoblarini email:password (tdydjkhfuhhh@gmail.com:grass_parol123) formatida joylashtiring.
+
+
    
 2. Proxy sozlash 🔒
 
    Proksi-serverlaringizni `data/proxies.txt` da *ANY* (socks, http/s, ...) formatida sozlang. (Misol uchun "http://login:parol@ip:port") 🌐
+
+
 
 ## Docker tomonidan tez boshlash
    1. Docker-CE ni o'rnating: `curl -sSL -k https://get.docker.com | sh`
@@ -90,7 +111,7 @@ Ushbu havolada solana hamyon generatorni topishingiz mumkin: [Solana Wallet yara
 
 Yangi hisoblarni ro'yxatdan o'tkazish uchun quyidagi sozlamalardan foydalaning:
 
-```ochiq matn
+```plaintext
 REGISTER_ACCOUNT_ONLY = True
 MINING_MODE = False
 ```
@@ -108,7 +129,7 @@ Qo'shimcha natijalar fayllari:
 
 Elektron pochtani tekshirish va hamyonga ulanish uchun ushbu sozlamalardan foydalaning:
 
-```ochiq matn
+```plaintext
 APPROVE_EMAIL = True
 CONNECT_WALLET = True
 SEND_WALLET_APPROVE_LINK_TO_EMAIL = True
@@ -126,7 +147,7 @@ MINING_MODE = False
 
 Mayning rejimini yoqish uchun quyidagi sozlamalardan foydalaning:
 
-```ochiq matn
+```plaintext
 APPROVE_EMAIL = False
 CONNECT_WALLET = False
 SEND_WALLET_APPROVE_LINK_TO_EMAIL = False
