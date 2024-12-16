@@ -1,22 +1,8 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 # G-MAIN
 # 🔹Grass Auto ro'yhatdan o'tish va point farm 🔹
 
 ![image](https://github.com/JMSM0707/G-MAIN/blob/main/core/static/Image-1.png)
+
 ![image](github.com/JMSM0707/G-MAIN/blob/main/core/static/Image-2.png)
 
 ### Bot nima qila oladi?
