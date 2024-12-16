@@ -1,9 +1,6 @@
 # G-MAIN
 # 🔹Grass Auto ro'yhatdan o'tish va point farm 🔹
 
-CONSOLE
-![image](https://github.com/JMSM0707/G-MAIN/blob/main/core/static/Image-1.png)
-
 NODE
 
 ![image](github.com/JMSM0707/G-MAIN/blob/main/core/static/Image-2.png)
