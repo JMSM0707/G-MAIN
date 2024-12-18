@@ -7,7 +7,7 @@ import aiohttp
 from fake_useragent import UserAgent
 from tenacity import stop_after_attempt, retry, retry_if_not_exception_type, wait_random, retry_if_exception_type
 
-from data.config import MIN_PROXY_SCORE, CHECK_POINTS, STOP_ACCOUNTS_WHEN_SITE_IS_DOWN
+from data.config import MIN_PROXY_SCORE, CHECK_POINTS, STOP_ACCOUNTS_WHEN_SITE_IS_DOWN, NODE_TYPE
 
 try:
     from data.config import SHOW_LOGS_RARELY
@@ -98,7 +98,8 @@ class Grass(GrassWs, GrassRest, FailureCounter):
 
                 await self.auth_to_extension(browser_id, user_id)
 
-                await self.handle_http_request_action()
+                if NODE_TYPE != "2x":
+                    await self.handle_http_request_action()
 
                 for i in range(10 ** 9):
                     if MIN_PROXY_SCORE and self.proxy_score is None:
@@ -139,7 +140,7 @@ class Grass(GrassWs, GrassRest, FailureCounter):
                 # await self.delay_with_log(msg=f"{self.id} | Reconnecting with delay for some minutes...", sleep_time=60)
             # except Exception as e:
             #     logger.info(f"{self.id} | {traceback.format_exc()}")
-            await self.failure_handler(limit=2)
+            await self.failure_handler(limit=3)
 
             await asyncio.sleep(5, 10)
 
