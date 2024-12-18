@@ -6,6 +6,7 @@ from random import choice
 from aiohttp import WSMsgType
 import uuid
 
+from better_proxy import Proxy
 
 from core.utils.exception import WebsocketClosedException, ProxyForbiddenException
 
@@ -93,7 +94,7 @@ class GrassWs:
         elif NODE_TYPE == "2x":
             message['result'].update({
                 "device_type": "desktop",
-                "version": "4.28.2",
+                "version": "4.30.0",
             })
             message['result'].pop("extension_id")
 
@@ -119,6 +120,9 @@ class GrassWs:
         http_info = await self.receive_message()
         result = await self.build_http_request(http_info['data'])
 
+        if result == {}:
+            raise ConnectionResetError("Not full http request action.")
+
         message = json.dumps(
             {
                 "id": http_info["id"],
@@ -130,6 +134,9 @@ class GrassWs:
         await self.send_message(message)
 
     async def build_http_request(self, request_data):
+        if request_data.get("method") is None:
+            return {}
+
         method = request_data['method']
         url = request_data['url']
         headers = request_data['headers']
@@ -140,6 +147,12 @@ class GrassWs:
                 body)  # this will probably be in json format when decoded but i dont think there is a need to turn it to a json
 
         try:
+            # if self.proxy:
+            #     proxy_to_encode = Proxy.from_str(self.proxy)
+            #     encoded_proxy = base64.b64encode(bytes(f'{proxy_to_encode.login}:{proxy_to_encode.password}', 'utf-8'))
+            #     encoded_proxy_as_str = encoded_proxy.decode('utf-8')
+            #     headers['proxy-authorization'] = encoded_proxy_as_str
+
             response = await self.session.request(method, url,
                                                   headers=headers, data=body, proxy=self.proxy)
 
