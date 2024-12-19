@@ -782,3 +782,4 @@ class Ui_MainWindow(object):
         self.pushButton_Save.setText(QCoreApplication.translate("MainWindow", u"Save", None))
     # retranslateUi
 
+
