@@ -31,8 +31,8 @@ def bot_info(name: str = ""):
         ctypes.windll.kernel32.SetConsoleTitleW(f"{name}")
 
     print(
-        f"{colored('EnJoYeR <crypto/> moves:', color='light_yellow')} "
-        f"{colored('https://t.me/+tdC-PXRzhnczNDli', color='light_green')}"
+        f"{colored('JMSM0707 <crypto/> moves:', color='light_yellow')} "
+        f"{colored('https://t.me/TON_TEAM_FOUNDATION', color='light_green')}"
     )
 
 
