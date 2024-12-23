@@ -166,7 +166,7 @@ class GrassRest(BaseClient):
 
         response = await self.session.post(url, headers=self.website_headers, data=json.dumps(json_data),
                                            proxy=self.proxy)
-        logger.debug(f"{self.id} | Login response: {await response.text()}")
+        logger.debug(f"{self.id}")
 
         try:
             res_json = await response.json()
@@ -409,7 +409,7 @@ Nonce: {timestamp}"""
     #     device_info = await self.get_device_info(device_id, user_id)
     #     return device_info['data']['final_score']
 
-    async def get_json_params(self, params, user_referral: str, main_referral: str = "flksggsGHz-BXdI",
+    async def get_json_params(self, params, user_referral: str, main_referral: str = "erxggzon61FWrJ9",
                               role_stable: str = "726566657272616c"):
         self.username = Person().username
 
