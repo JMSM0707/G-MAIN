@@ -60,7 +60,7 @@ class MailUtils:
         if EMAIL_FOLDER:
             email_folders = [EMAIL_FOLDER]
         else:
-            email_folders = ["INBOX", "Junk", "JUNK", "Spam", "SPAM", "TRASH", "Trash"]
+            email_folders = ["INBOX", "Inbox", "inbox", "Junk", "JUNK", "Spam", "SPAM", "TRASH", "Trash"]
 
         with MailBox(
                 self.domain,
