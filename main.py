@@ -31,8 +31,8 @@ def bot_info(name: str = ""):
         ctypes.windll.kernel32.SetConsoleTitleW(f"{name}")
 
     print(
-        f"{colored('JMSM0707 <crypto/> moves:', color='light_yellow')} "
-        f"{colored('https://t.me/TON_TEAM_FOUNDATION', color='light_green')}"
+        f"{colored('EnJoYeR <crypto/> moves:', color='light_yellow')} "
+        f"{colored('https://t.me/+tdC-PXRzhnczNDli', color='light_green')}"
     )
 
 
@@ -130,8 +130,11 @@ async def main():
     proxies = [Proxy.from_str(proxy).as_url for proxy in file_to_list(PROXIES_FILE_PATH)]
 
     #### delete DB if it exists to clean up
-    if os.path.exists(PROXY_DB_PATH):
-        os.remove(PROXY_DB_PATH)
+    try:
+        if os.path.exists(PROXY_DB_PATH):
+            os.remove(PROXY_DB_PATH)
+    except PermissionError:
+        logger.warning(f"Cannot remove {PROXY_DB_PATH}, file is in use")
 
     db = AccountsDB(PROXY_DB_PATH)
     await db.connect()
