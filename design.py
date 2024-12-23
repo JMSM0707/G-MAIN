@@ -781,4 +781,3 @@ class Ui_MainWindow(object):
         self.textEdit_Log.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Logs...", None))
         self.pushButton_Save.setText(QCoreApplication.translate("MainWindow", u"Save", None))
     # retranslateUi
-
