@@ -87,7 +87,7 @@ class GrassWs:
             }
         }
 
-        if NODE_TYPE == "1_25x":
+        if NODE_TYPE == "1.25x":
             message['result'].update({
                 "extension_id": "lkbnfiajjmbhnfledhphioinpickokdi",
             })
