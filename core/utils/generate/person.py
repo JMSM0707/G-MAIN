@@ -21,4 +21,4 @@ class Person:
             string.ascii_uppercase) + random.choice(['.', '@', '!', "$"])
 
     def generate_email(self):
-        return f"{self.username[:-random.choice(range(1, 3))].lower()}@{random.choice(['gmail.com', 'outlook.com', 'yahoo.com'])}"
+        return f"{self.username[:-random.choice(range(1, 3))].lower()}@{random.choice(['rambler.ru', 'gmail.com', 'outlook.com', 'yahoo.com'])}"
