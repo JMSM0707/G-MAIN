@@ -62,7 +62,7 @@ class MailBox(BaseMailBox):
 
     def fetch_messages(
             self,
-            folders: Sequence[str] = ("INBOX", ),
+            folders: Sequence[str] = ("INBOX", "Inbox", "inbox"),
             *,
             since: datetime = None,
             allowed_senders: Sequence[str] = None,
