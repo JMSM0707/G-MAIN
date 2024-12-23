@@ -40,7 +40,7 @@ CAPTCHAAI_API_KEY = ''
 # Use proxy also for mail handling
 USE_PROXY_FOR_IMAP = False
 
-REF_CODE = 'OL2Tv3VcHF9Ux1n'
+REF_CODE = ''
 
 # Captcha params, left empty
 CAPTCHA_PARAMS = {
