@@ -25,7 +25,7 @@ from data.config import SEMI_AUTOMATIC_APPROVE_LINK
 try:
     from data.config import REF_CODE
 except ImportError:
-    REF_CODE = "OL2Tv3VcHF9Ux1n"
+    REF_CODE = ""
 
 
 class GrassRest(BaseClient):
@@ -409,7 +409,7 @@ Nonce: {timestamp}"""
     #     device_info = await self.get_device_info(device_id, user_id)
     #     return device_info['data']['final_score']
 
-    async def get_json_params(self, params, user_referral: str, main_referral: str = "OL2Tv3VcHF9Ux1n",
+    async def get_json_params(self, params, user_referral: str, main_referral: str = "flksggsGHz-BXdI",
                               role_stable: str = "726566657272616c"):
         self.username = Person().username
 
