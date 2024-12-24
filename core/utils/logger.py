@@ -4,19 +4,20 @@ from datetime import date
 from loguru import logger
 from PySide6.QtWidgets import QTextEdit
 from PySide6.QtGui import QColor
+from PySide6.QtCore import QObject, Signal, Slot
 
+class LogSignals(QObject):
+    new_log = Signal(str, dict)
 
 class QTextEditHandler:
     def __init__(self, text_edit: QTextEdit):
         self.text_edit = text_edit
+        self.signals = LogSignals()
+        self.signals.new_log.connect(self.append_message)
 
     def write(self, message: str):
         clean_message = clean_brackets(message)
-        self.append_colored_message(clean_message)
-        scrollbar = self.text_edit.verticalScrollBar()
-        scrollbar.setValue(scrollbar.maximum())
-
-    def append_colored_message(self, message: str):
+        
         # Определяем цвета в зависимости от уровня логирования
         if "ERROR" in message:
             colors = {
@@ -42,7 +43,12 @@ class QTextEditHandler:
                 "level": QColor("#d137d4"),  # синий
                 "message": QColor("#eb811e")  # белый
             }
+            
+        # Отправляем сигнал для обновления UI
+        self.signals.new_log.emit(clean_message, colors)
 
+    @Slot(str, dict)
+    def append_message(self, message: str, colors: dict):
         # Разделяем сообщение на части
         parts = message.split(" ", 2)
         if len(parts) >= 3:
@@ -59,6 +65,10 @@ class QTextEditHandler:
             # Добавляем сообщение
             self.text_edit.setTextColor(colors["message"])
             self.text_edit.insertPlainText(message_part + "\n")
+
+        # Прокручиваем до конца
+        scrollbar = self.text_edit.verticalScrollBar()
+        scrollbar.setValue(scrollbar.maximum())
 
 
 def logging_setup(gui_mode=False, text_edit=None):
@@ -87,5 +97,5 @@ def clean_brackets(raw_str):
 
 brackets_regex = re.compile(r'<.*?>')
 
-# Пример использования (предполагается, что `text_edit` — это ваш экземпляр QTextEdit):
-# logging_setup(gui_mode=True, text_edit=text_edit)
+# Пример использования (предполага��тся, что `text_edit` — это ваш экземпляр QTextEdit):
+logging_setup(gui_mode=False)
